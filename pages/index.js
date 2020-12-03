@@ -11,19 +11,11 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>この耳に触るものみな地獄行き</p>
-        <p>
-          (This is a sample website - you'll be building a site like this on {' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial.</a>)
-        </p>
       </section>
       <section className={utilStyles.list}>
         {allPostsData.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
-            {title}
-            <br />
-            {id}
-            <br />
-            {date}
+            {date} [{id}] {title}
           </li>
         ))}
       </section>
